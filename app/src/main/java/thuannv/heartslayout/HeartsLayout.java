@@ -3,12 +3,7 @@ package thuannv.heartslayout;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
@@ -27,6 +22,8 @@ public class HeartsLayout extends View {
     private HeartAnimator mAnimator;
 
     private final int FPS = 30;
+
+    private final long INTERVAL = 1000L / FPS;
 
     private final AtomicInteger mCounter = new AtomicInteger(0);
 
@@ -69,30 +66,6 @@ public class HeartsLayout extends View {
         } finally {
             a.recycle();
         }
-    }
-
-    @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                for (int i = 0; i < 10000; i++) {
-//                    mUIHandler.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            add(new HeartDrawable(mDrawable));
-//                        }
-//                    });
-//
-//                    try {
-//                        Thread.sleep(200);
-//                    } catch (InterruptedException e) {
-//                    }
-//                }
-//            }
-//        }).start();
     }
 
     public void add(final HeartDrawable heart) {
@@ -151,6 +124,6 @@ public class HeartsLayout extends View {
         }
 
         canvas.restoreToCount(savedCount);
-        postInvalidateDelayed(1000L / FPS);
+        postInvalidateDelayed(INTERVAL);
     }
 }
