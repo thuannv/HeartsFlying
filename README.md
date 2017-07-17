@@ -9,7 +9,7 @@ Bigo Live like heartlayout.
 
 This library is an optimization version of source code of HeartsLayout of tyrantgit at [tyrantgit/HeartsLayout](https://github.com/tyrantgit/HeartLayout). The HeartsLayout library of Tyrantgit has done its good job. But, There was a problem about the performance since too many HeartViews add/remove cause UI lagging if we play a stream with thousands of people who are sending hearts at the same time.
 
-This library optimize the case above by custom hearts layout and self-draw hearts. This means no more life cycle methods (measure, layout) run when add/remove when thousands of hearts are added.
+This library optimizes the case above by custom hearts layout and self-draw hearts. This means no more life cycle methods (measure, layout) run when adding/removing when thousands of hearts are added.
 
 
 ## Getting started
