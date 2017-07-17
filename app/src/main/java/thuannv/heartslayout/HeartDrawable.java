@@ -1,6 +1,7 @@
 package thuannv.heartslayout;
 
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -22,9 +23,9 @@ public class HeartDrawable {
     private boolean mVisible;
 
     public HeartDrawable(Drawable drawable) {
+        mVisible = true;
         mDrawable = drawable;
         mTransformation = new Transformation();
-        mVisible = true;
     }
 
     public void setAnimation(Animation anim) {
@@ -57,6 +58,7 @@ public class HeartDrawable {
                 if (mAnimation != null) {
                     mAnimation.getTransformation(AnimationUtils.currentAnimationTimeMillis(), mTransformation);
                     canvas.concat(mTransformation.getMatrix());
+                    d.setAlpha((int)(255 * mTransformation.getAlpha()));
                 }
                 d.draw(canvas);
                 canvas.restoreToCount(savedCount);
