@@ -9,11 +9,12 @@ import android.view.animation.Animation;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * @author thuannv
- * @since 13/07/2017
- */
 
+/**
+ * This source code file reference from class
+ * <a href="https://github.com/tyrantgit/HeartLayout/blob/master/heartlayout/src/main/java/tyrantgit/widget/PathAnimator.java">PathAnimator.java</a>
+ * in HeartLayout project of tyrantgit on GitHub
+ */
 public class HeartAnimator {
 
     public int mInitX;
