@@ -23,4 +23,5 @@ dependencies {
     compile project(":library")
 
     compile "com.squareup.picasso:picasso:2.4.0"
+    //compile 'com.github.thuannv:HeartsFlying:v1.0'
 }
