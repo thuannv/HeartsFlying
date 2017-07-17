@@ -21,7 +21,7 @@ public class HeartsLayout extends View {
 
     private HeartAnimator mAnimator;
 
-    private final int FPS = 30;
+    private final int FPS = 60;
 
     private final long INTERVAL = 1000L / FPS;
 
